@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+    <div id="app">
+        <button @click="show=!show">显示/隐藏</button>
+        <transition appear appear-active-class="animated swing"
+        enter-active-class="animated bounceIn"
+        leave-active-class="animated bounceOut">
+        <div v-if="show">过渡文字效果</div>
+    </transition>
+    </div>
+    <script>
+        var vm = new Vue({el: '#app',data:{show:true}})
+    </script>
+</body>
+</html>
