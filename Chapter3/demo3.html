@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="vue.js"></script>
+    <div id="app1">app1: {{title}}</div>
+    <div id="app2">app2: {{title}}</div>
+    <script>
+        var Vue2 = Vue.extend({
+            data () {
+                return {title: 'hello'}
+            }
+        })
+        var vm1 = new Vue({el: '#app1'})
+        var vm2 = new Vue2({el: '#app2'})
+    </script>
+</body>
+</html>
