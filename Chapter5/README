@@ -1,0 +1,3 @@
+#本实验有个人的标记
+#在App.vue的<router-link>标签中，把to="/55yzb-login"和to="/55yzb-register"改了，55yzb是我个人的标记，可以删掉55yzb-或者改为你个人的
+#在route.js，routes中凡是带着55yzb的都可以改了或者删掉
