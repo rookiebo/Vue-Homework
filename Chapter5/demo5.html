@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="vue.js"></script>
+    <script src="vue-router.js"></script>
+    <div id="app">
+        <router-link :to="{name: 'user', params: {id:123}}">登录</router-link>
+        <router-view></router-view>
+    </div>
+    <script>
+        var user = {
+            template: '<h3>我是user组件</h3>',
+            created() {
+                console.log(this.$route)
+            }
+        }
+        var router = new VueRouter({
+            routes: [{
+                path: '/user/:id',
+                name: 'user',
+                component: user
+            }]
+        })
+        var vm = new Vue({
+            el: "#app",
+            router
+        })
+    </script>
+</body>
+
+</html>
