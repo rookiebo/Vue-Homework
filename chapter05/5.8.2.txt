@@ -1,5 +1,0 @@
-
-// 编程式
-router.replace({ path: 'user' })
-// 声明式
-<router-link :to="{path:'user'}" replace></router-link>
